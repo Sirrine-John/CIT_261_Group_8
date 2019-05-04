@@ -3,6 +3,41 @@
     <head>
         <title>Week 2 Team Activity</title>
         <script>
+            function printInput(){
+            var dispalyVar = document.getElementById("displayText").value
+            document.getElementById("displayDiv").innerHTML = "Output: "+dispalyVar
+            }
+            function displaySum(){
+                document.getElementById("summingSection").innerHTML = "Output: "+additionSum(document.getElementById("inputNumber").value)
+            }
+            function additionSum(p1){
+                var sumVar
+                sumVar = p1;
+                //console.log("sumVarStart : "+sumVar)
+                if (isNaN(p1)){
+                    return "Not a number"
+                }
+                else{
+                    for (i=p1;i>0;i--){
+                        sumVar = parseInt(sumVar) + (parseInt(i)-1);
+                        //console.log("Inside loop number: "+i)
+                        //console.log("Inside loop sumVar: "+sumVar)
+                    }
+                //console.log("returning : "+sumVar)
+                return sumVar;
+                }
+            }
+            function addInputsDisplay(){
+                document.getElementById("addingOutput").innerHTML = "Output: "+addInputs(document.getElementById("input1").value,document.getElementById("input2").value)
+            }
+            function addInputs(p1,p2){
+                if (isNaN(p1) || isNaN(p2)){
+                    return "Not a number"
+                }
+                else{
+                    return parseInt(p1) + parseInt(p2)
+                }
+            }
         </script>
 
         <style>
@@ -10,5 +45,22 @@
     </head>
 
     <body>
+        <section>
+            Put your input to display in the box below:
+            <p><input id="displayText"></input></p>
+            <button onclick="printInput()">Print the Input</button>
+        </section>
+        <div id="displayDiv">Output: </div>
+        <div><p>Summing section.</p>
+            <p><input id="inputNumber"></input></p>
+            <button onclick="displaySum()">Sum entered number</button></div>
+        <div id="summingSection">Output: </div>
+        <div id="addingMachine"></div>
+        <div id="addingItems"></div>
+        <div><p>Adding Machine.</p>
+            <p><input id="input1"></input>
+                <input id="input2"></input>
+                <br>Add Values: <button onclick="addInputsDisplay()">+</button></p></div>
+        <div id="addingOutput">Output: </div>
     </body>
 </html>

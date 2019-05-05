@@ -15,16 +15,16 @@ const calculator = {
         else{return dividend+"/"+divisor+"="+ (parseInt(dividend) / parseInt(divisor));}},
 
     exponent : function(base,exp) { 
-        // code to implement add
-        return;
+        // code to implement exponent
+        return "Not Implemented";
     },
     root : function(base,rt) { 
-        // code to implement add
-        return;
+        // code to implement root
+        return "Not Implemented";
     },
     modulo : function(base,mod) { 
-        // code to implement add
-        return;
+        // code to implement modulo
+        return "Not Implemented";
     }
 };
 

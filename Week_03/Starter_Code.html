@@ -73,26 +73,44 @@
 
       // Array.prototype.filter()
       // 1. Filter the list of inventors for those who were born in the 1500's
+      let FifteenHundreds = inventors.filter(invent => invent.year > 1499 && invent.year < 1600);
+      console.log(FifteenHundreds);
 
       // Array.prototype.map()
       // 2. Give us an array of the inventors' first and last names
+      let FirstLast = inventors.map(FrstLst => [FrstLst.first,FrstLst.last]);
+      console.log(FirstLast);
 
       // Array.prototype.sort()
       // 3. Sort the inventors by birthdate, oldest to youngest
+      let OldYoung = inventors.sort(function(a,b){return a.year - b.year});
+      console.log(OldYoung);
 
       // Array.prototype.reduce()
       // 4. How many years did all the inventors live?
+      let TotYears = inventors.reduce((totAge,person)=> totAge+(person.passed-person.year),0);
+      console.log(TotYears);
 
       // 5. Sort the inventors by years lived
+      let Longevity = inventors.sort(function(a,b){return (a.passed-a.year)-(b.passed-b.year)});
+      console.log(Longevity);
 
       // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
       // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
-      // goto the link above and open the console. Paste the following two lines in.  That will create a list of links in memory that you can reference through the console. Use that list to finish the problem.
-      // const category = document.querySelector('.mw-category');
-      // const links = Array.from(category.querySelectorAll('a'));
+      // goto the link above and open the console. Paste the following two lines in.
+      // That will create a list of links in memory that you can reference through the console.
+      // Use that list to finish the problem.
+      
+      //COPY THE FOLLOWING LINES INTO THE CONSOLE OF THE WIKI PAGE TO COMPLETE TASK
+      //const category = document.querySelector('.mw-category');
+      //const links = Array.from(category.querySelectorAll('a'));
+      //let result = links.filter(function(item){return typeof item.text == 'string' && item.text.indexOf("de") > -1;});
+      //for (i =0;i < result.length;i++){console.log(result[i].text)};
 
       // 7. sort Exercise
       // Sort the people alphabetically by last name
+      let PeopleSort = people.sort();
+      console.log(PeopleSort);
 
       // 8. Reduce Exercise
       // Sum up the instances of each of these
@@ -112,6 +130,11 @@
         'car',
         'truck'
       ];
+      let DupeRemoval = data.reduce(function (accum, currValue) {
+        if (accum.indexOf(currValue) === -1) {accum.push(currValue);}
+        return accum}, []);
+      console.log(DupeRemoval);
+
     </script>
   </body>
 </html>

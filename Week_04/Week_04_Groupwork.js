@@ -50,4 +50,4 @@ function getStatus(Player){
 }
 
 tictactoe.addEventListener("touchend", takeTurn);
-reset.addEventListener("touchend", resetBoard)
+reset.addEventListener("touchend", resetBoard);

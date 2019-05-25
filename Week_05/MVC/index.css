@@ -1,6 +1,17 @@
-ul.ulHeader{
+body{
+    margin: 0px;
+    color: burlywood;
+}
+h1{
+    color: beige;
+}
+.ulHeader{
     font-weight: bold;
 }
 li{
     font-weight: normal;
+}
+.hikelist{
+    margin: 5px;
+    padding: 0px;
 }

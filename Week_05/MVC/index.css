@@ -1,15 +1,19 @@
 body{
     margin: 0px;
-    color: burlywood;
+    background-color: burlywood;
 }
 h1{
-    color: beige;
-}
-.ulHeader{
-    font-weight: bold;
+    padding: 7px;
+    margin: 0%;
+    background-color: beige;
+    text-align: center;
+    margin-bottom: 10px;
 }
 li{
     font-weight: normal;
+}
+.ulHeader{
+    font-weight: bold;
 }
 .hikelist{
     margin: 5px;

@@ -7,7 +7,7 @@
 const hikeList = [
     {
     name: 'Bechler Falls',
-    imgSrc: 'falls.jpg',
+    imgSrc: 'Bfalls.jpg',
     imgAlt: 'Image of Bechler Falls',
     distance: '3 miles',
     difficulty: 'Easy',
@@ -18,8 +18,8 @@ const hikeList = [
     },
     {
     name: 'Teton Canyon',
-    imgSrc: 'falls.jpg',
-    imgAlt: 'Image of Bechler Falls',
+    imgSrc: 'canyon.jpg',
+    imgAlt: 'Image of Teton Canyon',
     distance: '3 miles',
     difficulty: 'Easy',
     description:
@@ -28,9 +28,9 @@ const hikeList = [
         'Take Highway 33 East to Driggs. Turn left onto Teton Canyon Road. Follow that road for a few miles then turn right onto Staline Raod for a short distance, then left onto Alta Road. Veer right after Alta back onto Teton Canyon Road. There is a parking area at the trailhead.'
     },
     {
-    name: 'Denanda Falls',
-    imgSrc: 'falls.jpg',
-    imgAlt: 'Image of Bechler Falls',
+    name: 'Dunanda Falls',
+    imgSrc: 'Dfalls.jpg',
+    imgAlt: 'Image of Dunanda Falls',
     distance: '3 miles',
     difficulty: 'Easy',
     description:
@@ -49,7 +49,7 @@ export default class HikeModel {
     }
   getHikeByName(hikeName) {
     // filter the hikes for the record identified by hikeName and return it
-    let hikeRequest = hikeList.find(hike => function(){if (hike.name == hikeName){return this}});
+    let hikeRequest = hikeList.find(hike => function(){if (hike.name == hikeName){return hike}});
     return hikeRequest;
 
   }

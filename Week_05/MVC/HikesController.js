@@ -19,7 +19,7 @@ export default class HikesController {
   showOneHike(hikeName) {
     // use this when you need to show just one hike...with full details
     console.log(this.hikeModel.getHikeByName(hikeName));
-    return this.hikeModel.getHikeByName(hikeName);
+    this.hikesView.renderOneHikeLight(this.hikeModel.getHikeByName(hikeName));
   }
   addHikeListener() {
     // for the stretch you will need to attach a listener to each of the listed hikes to watch for a touchend. 

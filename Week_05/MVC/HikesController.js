@@ -8,6 +8,8 @@ export default class HikesController {
     // this is how our controller will know about the model and view...we add them right into the class as members.
     this.hikeModel = new HikeModel();
     this.hikesView = new HikesView(parentId);
+    this.scrollStart;
+    this.scrollStop;
     this.showHikeList();
   }
   
@@ -21,11 +23,14 @@ export default class HikesController {
     return this.hikeModel.getAllHikes();
   }
   addScrollHandler(handle){
-    scrollStart = handle.target.scrollStart;
+    this.scrollStart = handle.target.scrollTop;
   }
   addHikeHandler(handle){
     let tempCont = new HikesController;
-    tempCont.showOneHike(handle.target.parentElement.id);
+    this.scrollStop = handle.target.scrollTop;
+    if (this.scrollStart === this.scrollStop){
+      tempCont.showOneHike(handle.target.parentElement.id);
+    }
   }
   resetHandle(){
     let tempCont = new HikesController;

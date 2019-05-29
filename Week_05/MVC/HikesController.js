@@ -20,6 +20,9 @@ export default class HikesController {
     //  this will get called each time we need to display our full hike list. It should grab the list of hikes from the Model, and then send them to the view.
     return this.hikeModel.getAllHikes();
   }
+  addScrollHandler(handle){
+    scrollStart = handle.target.scrollStart;
+  }
   addHikeHandler(handle){
     let tempCont = new HikesController;
     tempCont.showOneHike(handle.target.parentElement.id);
@@ -40,5 +43,8 @@ export default class HikesController {
     hikes.forEach(element => {
       document.getElementById(element.name).addEventListener("touchend",this.addHikeHandler);
     }); 
+    hikes.forEach(element => {
+      document.getElementById(element.name).addEventListener("touchstart",this.addScrollHandler);
+    });
   };
 };

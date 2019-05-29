@@ -1,16 +1,47 @@
 body{
     margin: 0px;
+    height: 100%;
+    width: 100%;
+}
+section{
+    margin: 0px;
+    border: outset;
+    border-width: 5px;
+    border-color: peru;
+    height: 100%;
+    right: 0;
     background-color: burlywood;
 }
 h1{
+    right: 0;
     padding: 7px;
     margin: 0%;
     background-color: beige;
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 2px;
 }
-li{
-    font-weight: normal;
+h4{
+    right: 0;
+    margin: 0%;
+    padding-bottom: 3px;
+    text-align: center;
+}
+ul{
+    padding: 10px;
+}
+tbody{
+    width: auto;
+}
+tr{
+    width: auto;
+}
+td{
+    width: auto;
+    padding: 7px;
+    font-size: medium;
+}
+img{
+    width: 100%;
 }
 .ulHeader{
     font-weight: bold;

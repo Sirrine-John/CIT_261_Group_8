@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./StarWars.css">
+</head>
+<body onload="People()">
+    <section id="header">
+        <H1>StarWars List</H1>
+        <div class="navbar">
+            <a href="#people" id="people" onclick="People()" class="active">People</a>
+            <a href="#ships" id="ships" onclick="Ships()">Ships</a>
+        </div>
+    </section>
+    <section id="curentList"></section>
+    <section id="buttons">
+        <button id="prev" onclick="Previous()">Previous</button>
+        <button id="next" onclick="Next()">Next</button>
+        <br><br><div id="pages"></div>
+        <div><input type="number" name="page" id="pageInput"></div>
+    </section>
+    <script src="StarWars.js"></script>
+</body>
+</html>
